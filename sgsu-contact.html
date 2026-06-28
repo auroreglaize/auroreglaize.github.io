@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Built to Live</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --noir: #1C1C1A; --blanc: #FFFFFF; --off: #F8F6F2;
+    --accent: #C8A96E; --accent2: #E8D5A8; --gris: #8A8780; --border: #E8E4DC;
+    --display: 'Cormorant Garamond', serif; --body: 'DM Sans', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--blanc); color: var(--noir); font-family: var(--body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.75rem 3rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--display); font-size: 1.05rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--noir); text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--gris); transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--noir); }
+  .nav-cta { color: var(--accent) !important; }
+
+  /* HERO */
+  .page-hero { padding: 10rem 3rem 6rem; }
+  .page-hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: start; }
+  .eyebrow { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gris); margin-bottom: 1.5rem; }
+  .page-title { font-family: var(--display); font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; font-style: italic; line-height: 1.0; letter-spacing: -0.01em; margin-bottom: 1.5rem; }
+  .page-intro { font-size: 0.95rem; color: var(--gris); line-height: 1.85; }
+
+  /* FORM */
+  .form-block { }
+  .form-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--noir); display: block; margin-bottom: 0.5rem; }
+  .form-group { margin-bottom: 1.5rem; }
+  .form-input, .form-textarea {
+    width: 100%; padding: 0.9rem 1rem;
+    border: 1px solid var(--border); background: var(--blanc);
+    font-family: var(--body); font-size: 0.9rem; font-weight: 300;
+    color: var(--noir); outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+  .form-input::placeholder, .form-textarea::placeholder { color: var(--gris); }
+  .form-textarea { resize: vertical; min-height: 140px; }
+  .btn-primary { display: inline-block; background: var(--accent); color: var(--blanc); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; padding: 1rem 2.25rem; transition: background 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { background: #b89558; }
+
+  /* RACCOURCIS */
+  .raccourcis { padding: 5rem 3rem; background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .raccourcis-inner { max-width: 1120px; margin: 0 auto; }
+  .raccourcis-title { font-family: var(--display); font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 300; font-style: italic; color: var(--noir); margin-bottom: 2.5rem; }
+  .raccourcis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .raccourci-card { background: var(--blanc); border: 1px solid var(--border); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; transition: border-color 0.2s; text-decoration: none; }
+  .raccourci-card:hover { border-color: var(--accent2); }
+  .raccourci-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+  .raccourci-title { font-family: var(--display); font-size: 1.2rem; font-weight: 300; font-style: italic; color: var(--noir); }
+  .raccourci-arrow { font-size: 0.72rem; color: var(--gris); margin-top: auto; }
+
+  /* INFOS */
+  .infos { padding: 5rem 3rem; }
+  .infos-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+  .info-block { }
+  .info-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gris); margin-bottom: 0.75rem; }
+  .info-value { font-family: var(--display); font-size: 1.15rem; font-weight: 300; color: var(--noir); }
+  .info-value a { color: var(--accent); text-decoration: none; }
+  .info-value a:hover { text-decoration: underline; }
+
+  footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: var(--blanc); }
+  .footer-logo { font-family: var(--display); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; }
+  .footer-copy { font-size: 0.7rem; color: var(--gris); }
+  .footer-nav { display: flex; gap: 2rem; list-style: none; }
+  .footer-nav a { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--gris); }
+
+  @media (max-width: 900px) {
+    nav { padding: 1.25rem 1.5rem; }
+    .nav-links { display: none; }
+    .page-hero, .raccourcis, .infos, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .page-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .raccourcis-grid, .infos-inner { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="sgsu-home.html" class="nav-logo">Built to Live</a>
+  <ul class="nav-links">
+    <li><a href="sgsu-offres.html">Services</a></li>
+    <li><a href="sgsu-about.html">À propos</a></li>
+    <li><a href="sgsu-contact.html" class="active">Contact</a></li>
+    <li><a href="sgsu-contact.html" class="nav-cta">Rejoindre →</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h1 class="page-title">Ton point de départ commence ici.</h1>
+      <p class="page-intro">Une question, une envie de démarrer, ou juste besoin d'un peu plus d'infos avant de te lancer — écris-moi, je réponds rapidement.</p>
+    </div>
+    <div class="form-block">
+      <div class="form-group">
+        <label class="form-label">Prénom</label>
+        <input type="text" class="form-input" placeholder="Ton prénom">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="ton@email.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Ton message</label>
+        <textarea class="form-textarea" placeholder="Dis-moi ce qui t'amène…"></textarea>
+      </div>
+      <a href="mailto:aurore.glaize@gmail.com" class="btn-primary">Envoyer →</a>
+    </div>
+  </div>
+</section>
+
+<section class="raccourcis">
+  <div class="raccourcis-inner">
+    <h2 class="raccourcis-title">Tu sais déjà ce que tu veux ?</h2>
+    <div class="raccourcis-grid">
+      <a href="sgsu-offres.html" class="raccourci-card">
+        <p class="raccourci-label">Présentiel</p>
+        <p class="raccourci-title">Coaching individuel</p>
+        <p class="raccourci-arrow">Réserver ma première séance →</p>
+      </a>
+      <a href="sgsu-offres.html" class="raccourci-card">
+        <p class="raccourci-label">À distance</p>
+        <p class="raccourci-title">Coaching en ligne</p>
+        <p class="raccourci-arrow">Je démarre →</p>
+      </a>
+      <a href="sgsu-offres.html" class="raccourci-card">
+        <p class="raccourci-label">Collectif</p>
+        <p class="raccourci-title">Small Group / Workshops</p>
+        <p class="raccourci-arrow">Je veux être prévenu·e →</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="infos">
+  <div class="infos-inner">
+    <div class="info-block">
+      <p class="info-label">Instagram</p>
+      <p class="info-value"><a href="https://instagram.com/aurore.coaching" target="_blank">@aurore.coaching</a></p>
+    </div>
+    <div class="info-block">
+      <p class="info-label">Email</p>
+      <p class="info-value"><a href="mailto:aurore.glaize@gmail.com">aurore.glaize@gmail.com</a></p>
+    </div>
+    <div class="info-block">
+      <p class="info-label">Lieu</p>
+      <p class="info-value">Montréal, Québec</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="sgsu-home.html" class="footer-logo">Built to Live</a>
+  <ul class="footer-nav">
+    <li><a href="sgsu-offres.html">Services</a></li>
+    <li><a href="sgsu-about.html">À propos</a></li>
+    <li><a href="sgsu-contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">Montréal · © 2025</p>
+</footer>
+
+</body>
+</html>

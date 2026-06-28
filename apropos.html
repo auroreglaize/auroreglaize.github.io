@@ -23,6 +23,19 @@ footer{padding:2rem 3rem;border-top:1px solid var(--border);display:flex;justify
 .footer-nav a{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--gris)}
 .footer-nav a:hover{color:var(--noir)}
 @media(max-width:768px){nav{padding:1.25rem 1.5rem}.nav-links{display:none}footer{padding:1.5rem}}
+
+/* HAMBURGER MOBILE */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--noir); transition: all 0.3s; }
+.mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--blanc); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; font-style: italic; text-decoration: none; color: var(--noir); }
+.mobile-menu a:hover { color: var(--accent); }
+.mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--gris); }
+@media(max-width:768px) {
+  .hamburger { display: flex; }
+  .nav-links { display: none !important; }
+}
 </style>
 <style>
 .page-hero{padding:9rem 3rem 5rem;background:var(--off);border-bottom:1px solid var(--border)}
@@ -63,7 +76,17 @@ footer{padding:2rem 3rem;border-top:1px solid var(--border);display:flex;justify
     <li><a href="apropos.html" class="active">À propos</a></li>
     <li><a href="contact.html" >Contact</a></li>
   </ul>
+
+<button class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="index.html">Accueil</a><a href="services.html">Services</a><a href="apropos.html">À propos</a><a href="contact.html">Contact</a>
+</div>
+
 <section class="page-hero">
   <div class="page-hero-inner">
     <div>

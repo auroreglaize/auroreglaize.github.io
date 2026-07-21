@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Services — Built to Live</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"><style>
+<title>Services &mdash; Built to Live</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"><style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--noir:#1C1C1A;--blanc:#FFFFFF;--off:#F8F6F2;--accent:#C8A96E;--accent2:#E8D5A8;--gris:#8A8780;--border:#E8E4DC}
 body{background:var(--blanc);color:var(--noir);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
@@ -22,7 +22,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3rem;display:
 .btn-outline{display:inline-block;border:1px solid var(--noir);color:var(--noir);font-size:.7rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;padding:.9rem 2rem;transition:background .2s,color .2s}
 .btn-outline:hover{background:var(--noir);color:var(--blanc)}
 .eyebrow{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);margin-bottom:1.5rem}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;font-style:italic;margin-bottom:2rem}
 footer{padding:2rem 3rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--noir);text-decoration:none}
 .footer-copy{font-size:.7rem;color:var(--gris)}
@@ -40,14 +39,20 @@ footer{padding:2rem 3rem;border-top:1px solid var(--border);display:flex;justify
 .offre-tag{font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);background:#FBF7EF;border:1px solid var(--accent2);padding:.4rem .85rem;display:inline-block;margin-bottom:1.25rem}
 .offre-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;font-style:italic;line-height:1.05;margin-bottom:.6rem}
 .offre-tagline{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--gris);margin-bottom:1.5rem}
-.offre-desc{font-size:.92rem;color:var(--gris);line-height:1.85;margin-bottom:1.5rem}
-.offre-pour-title{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--noir);margin-bottom:.6rem}
+.offre-desc{font-size:.92rem;color:var(--gris);line-height:1.85;margin-bottom:1rem}
+.offre-pour-title{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--noir);margin-bottom:.6rem;margin-top:1rem}
 .offre-pour-text{font-size:.88rem;color:var(--gris);line-height:1.75}
 .detail-title{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--noir);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
 .detail-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:2rem}
 .detail-list li{font-size:.88rem;color:var(--gris);line-height:1.6;padding-left:1.25rem;position:relative}
-.detail-list li::before{content:'—';position:absolute;left:0;color:var(--accent)}
-.coming{font-size:.82rem;color:var(--gris);font-style:italic;margin-bottom:1.5rem;padding:1rem;background:var(--off);border-left:2px solid var(--accent2)}
+.detail-list li::before{content:'&mdash;';position:absolute;left:0;color:var(--accent)}
+.tarifs-block{background:var(--off);border:1px solid var(--border);padding:1.5rem;margin-bottom:1.5rem}
+.tarifs-title{font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gris);margin-bottom:1rem}
+.tarif-ligne{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.88rem}
+.tarif-ligne:last-child{border-bottom:none}
+.tarif-label{color:var(--gris)}
+.tarif-price{font-weight:500;color:var(--noir)}
+.tarif-note{font-size:.78rem;color:var(--gris);font-style:italic;margin-top:.75rem}
 .btn-stack{display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
 .ws-section{background:var(--noir);padding:7rem 3rem}
 .ws-inner{max-width:1120px;margin:0 auto}
@@ -58,14 +63,14 @@ footer{padding:2rem 3rem;border-top:1px solid var(--border);display:flex;justify
 .ws-card-text{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7}
 .btn-ghost{display:inline-block;border:1px solid rgba(232,213,168,.3);color:#fff;font-size:.7rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;padding:.9rem 2rem}
 .eyebrow-light{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(232,213,168,.4);margin-bottom:1.5rem}
-@media(max-width:900px){.offre-inner{grid-template-columns:1fr;gap:3rem}.ws-grid{grid-template-columns:1fr}.offre-section,.ws-section{padding-left:1.5rem;padding-right:1.5rem}}
+@media(max-width:900px){.offre-inner{grid-template-columns:1fr;gap:3rem}.ws-grid{grid-template-columns:1fr}.offre-section,.ws-section,.page-hero{padding-left:1.5rem;padding-right:1.5rem}}
 </style>
 </head><body>
 <nav>
   <a href="index.html" class="nav-logo">Built to Live</a>
   <ul class="nav-links">
     <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="apropos.html" >À propos</a></li>
+    <li><a href="apropos.html" >&#192; propos</a></li>
     <li><a href="contact.html" >Contact</a></li>
   </ul>
   <button id="hamburger" class="hamburger" aria-label="Menu">
@@ -73,10 +78,10 @@ footer{padding:2rem 3rem;border-top:1px solid var(--border);display:flex;justify
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="closeBtn">✕</button>
+  <button class="mobile-close" id="closeBtn">&#x2715;</button>
   <a href="index.html">Accueil</a>
   <a href="services.html">Services</a>
-  <a href="apropos.html">À propos</a>
+  <a href="apropos.html">&#192; propos</a>
   <a href="contact.html">Contact</a>
 </div>
 <script>
@@ -84,58 +89,127 @@ document.getElementById('hamburger').addEventListener('click',function(){documen
 document.getElementById('closeBtn').addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open')});
 document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open')})});
 </script>
+
 <section class="page-hero">
-  <div class="page-hero-inner"><p class="eyebrow">Services</p><h1 class="page-title">Comment on travaille ensemble</h1></div>
-</section>
-
-<section class="offre-section">
-  <div class="offre-inner">
-    <div><span class="offre-tag">01 — Collectif</span><h2 class="offre-title">Small Group Training</h2><p class="offre-tagline">Show up. Je m'occupe du reste.</p><p class="offre-desc">Des séances de renforcement en petit groupe, où l'énergie collective rencontre l'attention individuelle.</p><p class="offre-pour-title">Pour qui ?</p><p class="offre-pour-text">Pour toi, peu importe ton niveau, ton âge, ton point de départ.</p></div>
-    <div><p class="detail-title">Comment ça se passe</p><ul class="detail-list"><li>1 heure de session complète : accueil, échauffement, corps de séance, retour au calme</li><li>4 à 8 personnes maximum</li><li>Renforcement musculaire, mobilité, travail fonctionnel</li><li>Corrections techniques individualisées à chaque séance</li></ul><p class="coming">Les créneaux et tarifs arrivent bientôt à Montréal.</p><a href="mailto:aurore.glaize@gmail.com" class="btn">Me contacter →</a></div>
+  <div class="page-hero-inner">
+    <p class="eyebrow">Services</p>
+    <h1 class="page-title">Comment on travaille ensemble</h1>
   </div>
 </section>
 
-<section class="offre-section">
+<section class="offre-section" id="prive">
   <div class="offre-inner">
-    <div><span class="offre-tag">02 — Individuel</span><h2 class="offre-title">Coaching Individuel</h2><p class="offre-tagline">Un accompagnement sur mesure, construit autour de toi.</p><p class="offre-desc">Une heure, rien que pour toi. On travaille ensemble sur tes objectifs, ta technique, ta progression.</p><p class="offre-pour-title">Pour qui ?</p><p class="offre-pour-text">Pour ceux qui veulent un suivi personnalisé et un programme pensé uniquement pour eux.</p></div>
-    <div><p class="detail-title">Comment ça se passe</p><ul class="detail-list"><li>Questionnaire personnalisé envoyé en amont</li><li>Corrections techniques en temps réel</li><li>Programme personnalisé, ajusté et évolutif</li><li>Disponible en présentiel, en ligne ou hybride</li></ul><div class="btn-stack"><a href="mailto:aurore.glaize@gmail.com" class="btn">Plus d'info →</a><a href="https://calendly.com/aurore-glaize/30min" target="_blank" class="btn-outline">Réserver un appel découverte gratuit →</a></div></div>
+    <div>
+      <span class="offre-tag">01 &mdash; Individuel</span>
+      <h2 class="offre-title">Entra&icirc;nement Priv&eacute;</h2>
+      <p class="offre-tagline">Un accompagnement sur mesure, construit autour de toi.</p>
+      <p class="offre-desc">Une heure, rien que pour toi. On travaille ensemble sur tes objectifs, ta technique, ta progression &mdash; avec un programme qui &eacute;volue &agrave; ton rythme.</p>
+      <p class="offre-pour-title">Pour qui ?</p>
+      <p class="offre-pour-text">Pour ceux qui veulent un suivi personnalis&eacute;, un regard technique expert, et un programme pens&eacute; uniquement pour eux.</p>
+    </div>
+    <div>
+      <p class="detail-title">Comment &ccedil;a se passe</p>
+      <ul class="detail-list">
+        <li>Questionnaire personnalis&eacute; envoy&eacute; en amont</li>
+        <li>Corrections techniques en temps r&eacute;el</li>
+        <li>Programme personnalis&eacute;, ajust&eacute; et &eacute;volutif</li>
+        <li>Disponible en pr&eacute;sentiel, en ligne ou hybride</li>
+      </ul>
+      <div class="tarifs-block">
+        <p class="tarifs-title">Tarifs + taxes</p>
+        <div class="tarif-ligne"><span class="tarif-label">S&eacute;ance &agrave; l&rsquo;unit&eacute;</span><span class="tarif-price">85$ CAD</span></div>
+        <div class="tarif-ligne"><span class="tarif-label">Pack 10 s&eacute;ances</span><span class="tarif-price">800$ CAD <small style="font-weight:300;color:var(--gris)">(80$/s&eacute;ance)</small></span></div>
+        <p class="tarif-note">D&eacute;j&agrave; en suivi online ? -10% sur les s&eacute;ances &agrave; l&rsquo;unit&eacute; &rarr; 76.50$ CAD</p>
+      </div>
+      <div class="btn-stack">
+        <a href="mailto:aurore.glaize@gmail.com" class="btn">Plus d&rsquo;info &rarr;</a>
+        <a href="https://calendly.com/aurore-glaize/30min" target="_blank" class="btn-outline">R&eacute;server un appel d&eacute;couverte gratuit &rarr;</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="offre-section">
+<section class="offre-section" id="semi-prive">
   <div class="offre-inner">
-    <div><span class="offre-tag">03 — En ligne</span><h2 class="offre-title">Coaching En Ligne</h2><p class="offre-tagline">Le même accompagnement, où que tu sois.</p><p class="offre-desc">Un suivi personnalisé à distance, pour progresser sans contrainte de lieu ou d'horaire.</p><p class="offre-pour-title">Pour qui ?</p><p class="offre-pour-text">Pour ceux qui veulent un programme structuré et un coach disponible — où qu'ils soient dans le monde.</p></div>
-    <div><p class="detail-title">Ce qui est inclus</p><ul class="detail-list"><li>Programme personnalisé et évolutif, ajusté chaque semaine</li><li>Check-in hebdomadaire</li><li>Feedback technique sur tes mouvements (vidéo / vocal)</li><li>Échanges WhatsApp — suivi rapproché, réponses rapides</li></ul><div class="btn-stack"><a href="mailto:aurore.glaize@gmail.com" class="btn">Plus d'info →</a><a href="https://calendly.com/aurore-glaize/30min" target="_blank" class="btn-outline">Réserver un appel découverte gratuit →</a></div></div>
+    <div>
+      <span class="offre-tag">02 &mdash; Semi-Priv&eacute;</span>
+      <h2 class="offre-title">Entra&icirc;nement Semi-Priv&eacute;</h2>
+      <p class="offre-tagline">Un accompagnement personnalis&eacute;, dans l&rsquo;&eacute;nergie d&rsquo;un petit groupe.</p>
+      <p class="offre-desc">Un format qui allie suivi individualis&eacute; et motivation collective &mdash; pour progresser &agrave; ton rythme, sans jamais &ecirc;tre livr&eacute;&middot;e &agrave; toi-m&ecirc;me.</p>
+      <p class="offre-desc">Chaque participant suit son propre programme, adapt&eacute; &agrave; ses objectifs, son niveau et ses besoins. Je suis pr&eacute;sente tout au long de la s&eacute;ance pour guider, corriger et ajuster.</p>
+      <p class="offre-pour-title">Ce que tu y gagnes</p>
+      <ul class="detail-list" style="margin-top:.6rem">
+        <li>Un suivi individualis&eacute; &agrave; un tarif plus accessible que le coaching personnel</li>
+        <li>Une progression encadr&eacute;e et adapt&eacute;e &agrave; toi</li>
+        <li>Une meilleure ma&icirc;trise des mouvements</li>
+        <li>La motivation d&rsquo;un petit groupe engag&eacute;</li>
+        <li>Des r&eacute;sultats concrets et durables</li>
+      </ul>
+    </div>
+    <div>
+      <div class="tarifs-block">
+        <p class="tarifs-title">Tarifs + taxes &middot; min 2 &middot; max 4 personnes</p>
+        <div class="tarif-ligne"><span class="tarif-label">2 personnes</span><span class="tarif-price">100$ CAD <small style="font-weight:300;color:var(--gris)">(50$/pers.)</small></span></div>
+        <div class="tarif-ligne"><span class="tarif-label">3 personnes</span><span class="tarif-price">110$ CAD <small style="font-weight:300;color:var(--gris)">(37$/pers.)</small></span></div>
+        <div class="tarif-ligne"><span class="tarif-label">4 personnes</span><span class="tarif-price">120$ CAD <small style="font-weight:300;color:var(--gris)">(30$/pers.)</small></span></div>
+      </div>
+      <a href="mailto:aurore.glaize@gmail.com" class="btn">Me contacter &rarr;</a>
+    </div>
   </div>
 </section>
 
-<section class="offre-section">
+<section class="offre-section" id="online">
   <div class="offre-inner">
-    <div><span class="offre-tag">04 — Hybride</span><h2 class="offre-title">Small Group + Suivi Online</h2><p class="offre-tagline">L'énergie du groupe. L'attention du suivi personnalisé.</p><p class="offre-desc">Le meilleur des deux mondes : une session collective par semaine et un suivi personnalisé entre les séances.</p><p class="offre-pour-title">Pour qui ?</p><p class="offre-pour-text">Pour ceux qui veulent la dynamique du groupe sans sacrifier l'attention individuelle.</p></div>
-    <div><p class="detail-title">Ce qui est inclus</p><ul class="detail-list"><li>1 session small group par semaine (4 à 8 personnes)</li><li>Programme personnalisé pour tes séances en autonomie</li><li>Check-in hebdomadaire</li><li>Échanges WhatsApp entre les séances</li></ul><p class="coming">Les créneaux et tarifs arrivent bientôt à Montréal.</p><a href="mailto:aurore.glaize@gmail.com" class="btn">Me contacter →</a></div>
+    <div>
+      <span class="offre-tag">03 &mdash; En ligne</span>
+      <h2 class="offre-title">Suivi Online</h2>
+      <p class="offre-tagline">Le m&ecirc;me accompagnement, o&ugrave; que tu sois.</p>
+      <p class="offre-desc">Un suivi personnalis&eacute; &agrave; distance, pour progresser sans contrainte de lieu ou d&rsquo;horaire &mdash; avec le m&ecirc;me niveau d&rsquo;attention qu&rsquo;en pr&eacute;sentiel.</p>
+      <p class="offre-pour-title">Pour qui ?</p>
+      <p class="offre-pour-text">Pour ceux qui veulent un programme structur&eacute;, un suivi r&eacute;gulier et un coach disponible &mdash; o&ugrave; qu&rsquo;ils soient dans le monde.</p>
+    </div>
+    <div>
+      <p class="detail-title">Ce qui est inclus</p>
+      <ul class="detail-list">
+        <li>Programme personnalis&eacute; et &eacute;volutif, ajust&eacute; chaque semaine</li>
+        <li>Check-in hebdomadaire</li>
+        <li>Feedback technique sur tes mouvements (vid&eacute;o / vocal)</li>
+        <li>&Eacute;changes WhatsApp &mdash; suivi rapproch&eacute;, r&eacute;ponses rapides</li>
+      </ul>
+      <div class="tarifs-block">
+        <p class="tarifs-title">Tarif + taxes</p>
+        <div class="tarif-ligne"><span class="tarif-label">Mensuel</span><span class="tarif-price">270$ CAD/mois</span></div>
+        <p class="tarif-note">Engagement 3 mois minimum.</p>
+      </div>
+      <div class="btn-stack">
+        <a href="mailto:aurore.glaize@gmail.com" class="btn">Plus d&rsquo;info &rarr;</a>
+        <a href="https://calendly.com/aurore-glaize/30min" target="_blank" class="btn-outline">R&eacute;server un appel d&eacute;couverte gratuit &rarr;</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="ws-section">
   <div class="ws-inner">
-    <p class="eyebrow-light">05 — Événements</p>
-    <h2 class="ws-title">Workshops & Événements</h2>
+    <p class="eyebrow-light">04 &mdash; &Eacute;v&eacute;nements</p>
+    <h2 class="ws-title">Workshops &amp; &Eacute;v&eacute;nements</h2>
     <div class="ws-grid">
-      <div class="ws-card"><h3 class="ws-card-title">Ateliers haltérophilie</h3><p class="ws-card-text">Mouvements olympiques dans un cadre technique et bienveillant.</p></div>
-      <div class="ws-card"><h3 class="ws-card-title">Team Training</h3><p class="ws-card-text">Événements indoor ou outdoor — cardio, renfo, challenges, bonne humeur.</p></div>
-      <div class="ws-card"><h3 class="ws-card-title">Force & Santé</h3><p class="ws-card-text">Renforcement musculaire + talk avec des professionnels de santé.</p></div>
+      <div class="ws-card"><h3 class="ws-card-title">Ateliers halt&eacute;rophilie</h3><p class="ws-card-text">Mouvements olympiques dans un cadre technique et bienveillant.</p></div>
+      <div class="ws-card"><h3 class="ws-card-title">Team Training</h3><p class="ws-card-text">&Eacute;v&eacute;nements indoor ou outdoor &mdash; cardio, renfo, challenges, bonne humeur.</p></div>
+      <div class="ws-card"><h3 class="ws-card-title">Force &amp; Sant&eacute;</h3><p class="ws-card-text">Renforcement musculaire + talk avec des professionnels de sant&eacute;.</p></div>
     </div>
-    <p style="font-size:.85rem;color:rgba(255,255,255,.4);font-style:italic;margin-bottom:1.5rem">Les prochains événements arrivent bientôt.</p>
-    <a href="mailto:aurore.glaize@gmail.com" class="btn-ghost">Me prévenir →</a>
+    <p style="font-size:.85rem;color:rgba(255,255,255,.4);font-style:italic;margin-bottom:1.5rem">Les prochains &eacute;v&eacute;nements arrivent bient&ocirc;t.</p>
+    <a href="mailto:aurore.glaize@gmail.com" class="btn-ghost">Me pr&eacute;venir &rarr;</a>
   </div>
 </section>
+
 <footer>
   <a href="index.html" class="footer-logo">Built to Live</a>
   <ul class="footer-nav">
     <li><a href="services.html">Services</a></li>
-    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="apropos.html">&#192; propos</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <p class="footer-copy">Montréal · © 2025</p>
+  <p class="footer-copy">Montr&#233;al &middot; &copy; 2025</p>
 </footer>
 </body></html>
